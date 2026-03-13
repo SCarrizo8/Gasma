@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gasma | Contacto</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+          <img src="../img/actuacion.png" alt="Logo de Gasma" class="brand-logo">
+          <span class="fw-semibold">Gasma</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuContacto"
+          aria-controls="menuContacto" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuContacto">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suscripcion.html">Suscripción</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner py-5">
+      <div class="container text-center">
+        <h1 class="display-5 fw-bold">Contacto</h1>
+        <p class="lead mb-0">Estamos para ayudarte a dar forma al proyecto.</p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-7">
+            <form class="bg-white shadow-sm rounded-4 p-4">
+              <div class="mb-3">
+                <label for="nombreCompleto" class="form-label">Nombre y apellido</label>
+                <input type="text" class="form-control" id="nombreCompleto" placeholder="Ejemplo: Santiago Carrizo">
+              </div>
+
+              <div class="mb-3">
+                <label for="emailContacto" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="emailContacto" placeholder="tuemail@correo.com">
+              </div>
+
+              <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto</label>
+                <input type="text" class="form-control" id="asunto" placeholder="Consulta general">
+              </div>
+
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribí tu mensaje"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="card custom-card border-0 shadow-sm mb-4">
+              <div class="card-body p-4">
+                <h2 class="h4">Información</h2>
+                <p class="mb-2"><strong>Email:</strong> contacto@gasma.com</p>
+                <p class="mb-2"><strong>Horario:</strong> Lunes a viernes de 9 a 18</p>
+                <p class="mb-0"><strong>Ubicación:</strong> Catamarca, Argentina</p>
+              </div>
+            </div>
+
+            <div class="card custom-card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <img src="../img/img_money.jpg" alt="Imagen representativa de contacto y finanzas"
+                  class="img-fluid rounded-4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 custom-footer">
+    <div class="container text-center">
+      <p class="mb-1">© 2026 Gasma. Proyecto académico de maquetado web.</p>
+      <small>Formulario, navegación y diseño responsive.</small>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+</html>

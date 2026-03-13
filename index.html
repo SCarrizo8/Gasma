@@ -1,35 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <img src="img/actuacion.png" alt="">
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Suscripcion</li>
-                <li>Contacto</li>
-            </ul>
-        </nav>
-    </header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gasma | Inicio</title>
+  
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
 
-    <!--main-->
-<main>
-    <div class="">
-        <h1>Gasma project</h1>
-        <p>En Gasma obtendras consciencia financiera</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat illum debitis placeat facere. Rem, facere doloribus? Harum praesentium itaque nesciunt eos pariatur, velit similique quisquam ipsam est tenetur quo iure?</p>
+  <link rel="stylesheet" href="css/main.css">
+  
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">       
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="img/actuacion.png" alt="Logo de Gasma" class="brand-logo">
+          <span class="fw-semibold">Gasma</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/suscripcion.html">Suscripción</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+
+          <div class="col-12 col-lg-6">
+            <span class="badge rounded-pill text-bg-light mb-3">Finanzas personales y control</span>
+            <h1 class="display-5 fw-bold mb-3">Ordená tus finanzas con una experiencia más clara y visual</h1>
+            <p class="lead mb-4">
+              Gasma busca transformar la forma en que una persona registra, entiende y mejora su dinero.
+              La idea es combinar claridad, seguimiento y una experiencia simple.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="pages/suscripcion.html" class="btn btn-primary btn-lg">Quiero suscribirme</a>
+              <a href="pages/contacto.html" class="btn btn-outline-light btn-lg">Hablar con Gasma</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <img src="img/img_budget.jpg" alt="Imagen de presupuesto y planificación financiera"
+              class="img-fluid hero-image shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">¿Qué propone Gasma?</h2>
+          <p class="section-text">
+            Una forma más consciente de registrar gastos, visualizar información y tomar mejores decisiones.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="card custom-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <img src="img/factura-de-factura.png" alt="Ícono de facturas y registros" class="feature-icon mb-3">
+                <h3 class="h4">Registro ordenado</h3>
+                <p class="mb-0">
+                  Organizá tus gastos e ingresos con una estructura clara, legible y preparada para crecer.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="card custom-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <img src="img/actuacion.png" alt="Ícono de análisis financiero" class="feature-icon mb-3">
+                <h3 class="h4">Visualización simple</h3>
+                <p class="mb-0">
+                  Convertí datos dispersos en información útil con una presentación más limpia y entendible.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="card custom-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <img src="img/img_money.jpg" alt="Imagen de dinero y trabajo administrativo" class="feature-photo mb-3">
+                <h3 class="h4">Mejores decisiones</h3>
+                <p class="mb-0">
+                  Comprendé mejor tus hábitos financieros para decidir con más criterio.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-6">
+            <img src="img/img_money.jpg" alt="Espacio de trabajo con dinero y computadora"
+              class="img-fluid rounded-4 shadow-sm">
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title">Una base sólida para seguir creciendo</h2>
+            <p>
+              Esta web no solo debe verse bien: también tiene que estar bien estructurada.
+              Por eso voy a construirla con semántica, grillas, componentes reutilizables y rutas claras.
+            </p>
+            <ul class="custom-list">
+              <li>HTML semántico y ordenado</li>
+              <li>Bootstrap + CSS propio</li>
+              <li>Diseño responsive</li>
+              <li>Proyecto listo para GitHub Pages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 custom-footer">
+    <div class="container text-center">
+      <p class="mb-1">© 2026 Gasma. Proyecto académico de maquetado web.</p>
+      <small>Desarrollado con HTML, CSS, Bootstrap y GitHub Pages.</small>
     </div>
-    
-    <div class="imagenes">
-        <img src="../gasmaproject/img/img_budget.jpg" alt="">
-    </div>
-    
-</main>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 </html>
