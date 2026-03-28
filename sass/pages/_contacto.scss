@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as *;
+
+.contacto-page {
+  .form-label {
+    font-weight: 600;
+    color: $color-dark;
+  }
+}

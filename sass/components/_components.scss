@@ -1,0 +1,304 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+@keyframes float-image {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.btn-brand {
+  @include button-style($color-primary);
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+}
+
+.btn-brand-outline {
+  @include button-style(transparent, $color-white, rgba($color-white, 0.5));
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+  }
+}
+
+.hero {
+  @include section-space(5rem);
+  background: linear-gradient(135deg, $color-dark, $color-dark-soft);
+  color: $color-white;
+  overflow: hidden;
+
+  &__content {
+    max-width: 40rem;
+  }
+
+  &__badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background-color: rgba($color-white, 0.1);
+    border: 1px solid rgba($color-white, 0.15);
+    font-size: 0.9rem;
+  }
+
+  &__title {
+    font-size: clamp(2.1rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+  }
+
+  &__text {
+    font-size: 1.05rem;
+    color: rgba($color-white, 0.82);
+    margin-bottom: 1.75rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 24rem;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    animation: float-image 6s ease-in-out infinite;
+  }
+}
+
+.mini-stat {
+  @extend %card-shell;
+  padding: 1rem;
+  background-color: rgba($color-white, 0.06);
+  border-color: rgba($color-white, 0.1);
+  backdrop-filter: blur(6px);
+
+  &__number {
+    display: block;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: $color-white;
+  }
+
+  &__label {
+    display: block;
+    color: rgba($color-white, 0.78);
+    font-size: 0.95rem;
+  }
+}
+
+.feature-card {
+  @extend %card-shell;
+  height: 100%;
+  padding: 2rem;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-md;
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: $radius-sm;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: 0.75rem;
+  }
+
+  &__text {
+    color: $color-muted;
+  }
+}
+
+.cta-box {
+  @extend %card-shell;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba($color-primary, 0.08), rgba($color-secondary, 0.12));
+
+  &__title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: 0.75rem;
+  }
+
+  &__text {
+    color: $color-muted;
+  }
+}
+
+.plan-card {
+  @extend %card-shell;
+  padding: 2rem;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-md;
+  }
+
+  &--featured {
+    transform: scale(1.02);
+  }
+
+  &__badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    color: $color-muted;
+    margin-bottom: 1rem;
+  }
+}
+
+.form-box,
+.contact-panel {
+  @extend %card-shell;
+  padding: 2rem;
+}
+
+.form-box {
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-control {
+    border-radius: $radius-sm;
+    border: 1px solid $color-border;
+    padding: 0.85rem 1rem;
+    transition: $transition-base;
+
+    &:focus {
+      border-color: rgba($color-primary, 0.6);
+      box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.12);
+    }
+  }
+}
+
+.contact-panel {
+  &__title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    margin-bottom: 1.5rem;
+
+    li {
+      color: $color-muted;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: $radius-md;
+  }
+}
+
+.custom-accordion {
+  .accordion-item {
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .accordion-button {
+    font-weight: 700;
+    color: $color-dark;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: rgba($color-primary, 0.08);
+    color: $color-primary;
+    box-shadow: none;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+}
+
+@include respond(mobile) {
+  .hero {
+    @include section-space(3.8rem);
+
+    &__stats {
+      grid-template-columns: 1fr;
+    }
+
+    &__image {
+      min-height: 18rem;
+      animation: none;
+    }
+  }
+
+  .plan-card--featured {
+    transform: none;
+  }
+
+  .cta-box {
+    padding: 1.5rem;
+  }
+}

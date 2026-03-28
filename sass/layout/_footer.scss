@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+
+.site-footer {
+  background-color: $color-dark;
+  color: rgba($color-white, 0.85);
+  padding-block: 1.5rem;
+
+  &__copy {
+    margin: 0;
+  }
+
+  &__link {
+    color: rgba($color-white, 0.85);
+    margin-left: 1rem;
+    transition: $transition-base;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

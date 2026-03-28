@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+
+@each $name, $value in $plan-colors {
+  .plan-card--#{$name} {
+    border-top: 5px solid $value;
+
+    .plan-card__price {
+      color: $value;
+    }
+
+    .plan-card__badge {
+      background-color: rgba($value, 0.1);
+      color: $value;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+body {
+  font-family: $font-base;
+  color: $color-text;
+  background-color: $color-white;
+  line-height: 1.6;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.section-block {
+  @include section-space(5rem);
+
+  &--soft {
+    background-color: $color-light;
+  }
+}
+
+.section-heading {
+  max-width: 48rem;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__text {
+    color: $color-muted;
+    font-size: 1.05rem;
+  }
+}
+
+.content-image {
+  border-radius: $radius-lg;
+  min-height: 22rem;
+  object-fit: cover;
+  box-shadow: $shadow-sm;
+}
+
+.content-copy {
+  &__text {
+    color: $color-muted;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.custom-list {
+  li {
+    margin-bottom: 0.55rem;
+  }
+}
+
+.page-hero {
+  @include section-space(4.5rem);
+  background: linear-gradient(135deg, rgba($color-primary, 0.08), rgba($color-secondary, 0.1));
+
+  &__eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &__title {
+    @extend %section-title;
+    max-width: 48rem;
+    margin-inline: auto;
+  }
+
+  &__text {
+    max-width: 42rem;
+    margin-inline: auto;
+    color: $color-muted;
+  }
+}
+
+@each $name, $value in $theme-colors {
+  .bg-soft-#{$name} {
+    background-color: rgba($value, 0.08);
+  }
+
+  .text-brand-#{$name} {
+    color: $value;
+  }
+}
+
+@include respond(mobile) {
+  .section-block {
+    @include section-space(3.5rem);
+  }
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+}
+
+body {
+  background-color: #f3f4f6;
+}

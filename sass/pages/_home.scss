@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.home-page {
+  .hero + .section-block {
+    padding-top: 5.5rem;
+  }
+}
+
+@include respond(mobile) {
+  .home-page {
+    .hero + .section-block {
+      padding-top: 3.5rem;
+    }
+  }
+}

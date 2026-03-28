@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.custom-navbar {
+  background: linear-gradient(90deg, $color-dark, $color-dark-soft);
+  box-shadow: $shadow-sm;
+
+  .navbar-toggler {
+    border-color: rgba($color-white, 0.3);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .nav-link {
+    position: relative;
+    color: rgba($color-white, 0.85);
+    font-weight: 500;
+    transition: $transition-base;
+
+    &:hover,
+    &.active {
+      color: $color-white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 0.2rem;
+      height: 2px;
+      background-color: $color-secondary;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: $transition-base;
+    }
+
+    &:hover::after,
+    &.active::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.brand {
+  @include flex-center(flex-start, center);
+  gap: 0.75rem;
+
+  &__logo {
+    width: 2.6rem;
+    height: 2.6rem;
+    object-fit: contain;
+  }
+
+  &__text {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+}
